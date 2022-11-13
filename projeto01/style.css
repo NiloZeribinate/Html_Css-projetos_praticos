@@ -1,4 +1,4 @@
-body,header, h1, p{
+body,header, h1{
     margin: 0px;
     padding: 0;
     background-color: #131516;
@@ -6,19 +6,41 @@ body,header, h1, p{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p{
+    text-align: justify;
+}
+
 header{
+    margin: auto;
+    display: flex;
+    width: 1238px;
+    justify-content: space-between;
     color: aliceblue;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    height: 50px;
-    border-bottom: #303235 solid ;
+    border-bottom: #303235 solid;
 }
 
-header > h1{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 30px;
+header > *{
+    margin: 15px 25px;
+}
+
+header > div > a, article#introducao > div > a{
+    display: block;
+    border-radius: 25px;
+    width: 130px;
+    padding: 10px;
+    background-color: aquamarine;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.15em;
+    color: #131516;
+}
+
+header > div, article#introducao > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 img{
@@ -46,20 +68,7 @@ article#introducao > p{
     letter-spacing: 1px;
     font-size: 1.15em;
     color: rgb(204, 213, 220);
-}
-
-article#introducao > div > a{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 25px;
-    margin-top: 25px;
-    font-size: 1.15em;
-    background-color: aquamarine;
-    color: #131516;
-    width: 130px;
-    padding: 10px;
-
+    margin-bottom: 25px;
 }
 
 article#fotos{
@@ -129,15 +138,14 @@ article#fotos{
 footer{
     display: flex;
     margin: 75px auto;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 1188px;
 }
 
-footer > *{
-    flex: 1 1 300px;
+footer > a{
+    width: 50px;
 }
 
-footer > a > img{
-    width: 50px !important;
-    margin-left: auto;
+footer > p > a{
+    color: aliceblue;
 }
