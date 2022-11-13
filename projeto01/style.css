@@ -29,6 +29,7 @@ header > div > a, article#introducao > div > a{
     display: block;
     border-radius: 25px;
     width: 130px;
+    margin-top: 15px;
     padding: 10px;
     background-color: aquamarine;
     text-decoration: none;
@@ -37,7 +38,7 @@ header > div > a, article#introducao > div > a{
     color: #131516;
 }
 
-header > div, article#introducao > div{
+article#introducao > div{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
