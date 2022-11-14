@@ -16,6 +16,13 @@ p{
     text-align: justify;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+
 header{
     margin: auto;
     display: flex;
@@ -38,28 +45,26 @@ header > div > a, article#introducao > div > a{
     margin-top: 15px;
     padding: 10px;
     background-color: aquamarine;
+    background: linear-gradient(to right, #aaffa9, #11ffbd);
     text-decoration: none;
     text-align: center;
     font-size: 1.15em;
     color: #131516;
 }
 
-article#introducao > div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-img{
-    display: block;
-    max-width: 100%;
-}
 
 article#introducao{
     display: flex;
     flex-wrap: wrap;
     max-width: 1188px;
     margin: 75px auto;
+}
+
+article#introducao > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 article#introducao > *{
@@ -78,11 +83,13 @@ article#introducao > p{
     margin-bottom: 25px;
 }
 
+
+
 article#fotos{
     display: grid;
-    grid-template-columns: repeat(4, 282px 15px);
-    grid-template-rows: repeat(8, 202px 15px);
-    max-width: 1188px;
+    grid-template-columns: repeat(3, 282px 15px) 282px;
+    grid-template-rows: repeat(7, 202px 15px) 202px;
+    max-width: 1173px;
     margin: 50px auto;
 }
 
@@ -141,6 +148,8 @@ article#fotos{
     background-image: url('imagens/08.jpg');
     background-size: cover;
 }
+
+
 
 footer{
     display: flex;
