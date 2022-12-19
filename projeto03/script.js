@@ -84,17 +84,27 @@ function ElongathenString(text, size){
     }
 }
 
+function ClearString(text){
+    let newText = ''
+
+    for(i in text){
+        if(alfabeto.findIndex( (letter) => text[i].toLowerCase() === letter) != -1) newText += text[i]
+    }
+
+    return newText
+}
+
 
 function Crypt(){
-    const key = document.getElementById('key').value
-    const cryptionMessage = document.getElementById('cryptionMessage').value
+    const key = ClearString(document.getElementById('key').value)
+    const cryptionMessage = ClearString(document.getElementById('cryptionMessage').value)
 
     document.getElementById('encryptionMessage').value = handleCryptMessage(key, cryptionMessage)
 }
 
 function Encrypt(){
-    const key = document.getElementById('key').value
-    const encryptionMessage = document.getElementById('encryptionMessage').value
+    const key = ClearString(document.getElementById('key').value)
+    const encryptionMessage = ClearString(document.getElementById('encryptionMessage').value)
 
     document.getElementById('cryptionMessage').value = handleEncryptMessage(key, encryptionMessage)
 }
