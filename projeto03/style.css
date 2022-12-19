@@ -98,4 +98,11 @@ footer *{
     textarea{
         height: 80px;
     }
+
+    #buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        gap: 7px;
+    }
 }
