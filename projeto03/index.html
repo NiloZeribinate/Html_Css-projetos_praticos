@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quebrando Cifra de Vigenère</title>
+</head>
+<body>
+    <section>
+        <h1>Quebrando (e montando) <br> Cifra de Vigenère</h1>
+
+
+        <p>Digite a chave da criptografia</p>
+        <input type="text" name="key" id="key" placeholder="Chave da criptografia"></textarea>
+        
+        <p>Digite a mensagem que você quer criptografar</p>
+        <textarea type="text" name="cryptionMessage" id="cryptionMessage" placeholder="Mensagem à ser criptografada"></textarea>
+        
+        <p>Digite a mensagem que você quer descriptografada</p>
+        <textarea type="text" name="encryptionMessage" id="encryptionMessage" placeholder="Mensagem à ser descriptografada"></textarea>
+
+        <div id="buttons">
+            <button onclick="Crypt()">Criptografar</button>
+            <button onclick="Encrypt()">Descriptografar</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Nilo Zeribinate</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

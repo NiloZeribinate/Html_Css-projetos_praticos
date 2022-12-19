@@ -26,7 +26,8 @@ img{
 header{
     margin: auto;
     display: flex;
-    width: 1238px;
+    flex-wrap: wrap;
+    max-width: 1238px;
     justify-content: space-between;
     color: aliceblue;
     padding: 10px;
@@ -38,18 +39,21 @@ header > *{
     margin: 15px 25px;
 }
 
-header > div > a, article#introducao > div > a{
+.botao{
     display: block;
     border-radius: 25px;
     width: 130px;
     margin-top: 15px;
     padding: 10px;
-    background-color: aquamarine;
     background: linear-gradient(to right, #aaffa9, #11ffbd);
     text-decoration: none;
     text-align: center;
     font-size: 1.15em;
     color: #131516;
+}
+
+.botao:hover{
+    background: #EA526F;
 }
 
 
@@ -164,6 +168,10 @@ footer > a{
 
 footer > p > a{
     text-decoration: none;
+}
+
+footer > p > a:hover{
+    text-decoration: underline;
 }
 
 

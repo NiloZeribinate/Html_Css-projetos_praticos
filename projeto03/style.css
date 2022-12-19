@@ -1,0 +1,101 @@
+@font-face {
+    font-family: Segoe-UI;
+    src: url('font/Segoe UI.ttf');
+}
+
+@font-face {
+    font-family: Segoe-UI-Bold;
+    src: url('font/Segoe UI Bold.ttf.ttf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url('image/topography.png'), linear-gradient(140deg, #ec0bb4, #1485f6);
+    background-size: 340px, auto;
+    background-attachment: fixed;
+
+    font-family: 'Segoe-UI' ,Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+section{
+    width: 575px;
+    margin: 17px 10px 5px;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+h1{
+    font-family: 'Segoe-UI-Bold', Arial, Helvetica, sans-serif;
+}
+
+p{
+    margin: 12px 0 6px;
+}
+
+textarea{
+    width: 80%;
+    height: 115px;
+    text-align: justify;
+    padding: 10px;
+}
+
+input{
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+#buttons{
+    margin-top: 15px;
+}
+
+button{
+    background: none;
+    border-radius: 40px;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1em;
+    font-family: 'Segoe-UI-Bold', Arial, Helvetica, sans-serif;
+    color: #fcfcfc;
+    background-color: #ec0bb4;
+}
+
+footer *{
+    margin: 0;
+    color: #fcfcfc;
+}
+
+
+
+@media (max-width: 450px) {
+    body{
+        font-size: 16px;
+    }
+
+    section{
+        width: auto;
+    }
+
+    textarea, input{
+        width: 90%;
+    }
+
+    textarea{
+        height: 80px;
+    }
+}

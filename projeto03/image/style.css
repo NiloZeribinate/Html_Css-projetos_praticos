@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@font-face {
+    font-family: Segoe-UI;
+    src: url('font/Segoe UI.ttf');
+}
+
+:root{
+    --yellow: #ffc600;
+    --black: #272727;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Segoe-UI', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    padding: 10px 50px;
+
+    background-image: url('images/topography.png'), linear-gradient(160deg, #ec0bb4, #1485f6);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.content{
+    max-width: 1330px;
+    margin: auto;
+
+    justify-content: stretch;
+}
+
+
+
+header{
+    margin-bottom: 17px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-shadow: 0 2px rgba(39, 39, 39, .2);
+    
+}
+
+ul{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    gap: 7px;
+}
+
+li{
+    list-style-type: none;
+    width: 100%;
+
+    background-color: var(--yellow);
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--black);
+
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    
+    text-align: center;
+}
+
+.content .top{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "image image destaque1"
+    "image image destaque2";
+}
+
+.image{
+    grid-area: image;
+    height: 400px;
+    background: #fff url('images/taco-table.jpg');
+    background-size: cover;
+    background-position: bottom right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 15px;
+    padding: 55px;
+}
+
+.image h1{
+    background-color: var(--yellow);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.image h3{
+    background-color: var(--yellow);
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.destaque1{
+    grid-area: destaque1;
+}
+
+.destaque2{
+    grid-area: destaque2;
+}
+
+.destaque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--yellow);
+}
+
+.destaque span{
+    font-size: 2.8rem;
+}
+
+.destaque p{
+    margin-top: 5px;
+}
+
+
+
+.menu{
+    margin: 17px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item{
+    background-color: #fcfcfc;
+
+    flex: 1 1 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 150px;
+    text-align: center;
+
+    padding: 25px 10px;
+    padding-top: 10px;
+}
+
+.menu-item > *{
+    margin: 0;
+}
+
+.menu-item span{
+    font-size: 3.2rem;
+    margin: 7px 0;
+}
+
+.menu-item p{
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+
+
+.featured-taco{
+    background-color: #fcfcfc;
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+}
+
+.featured-taco h3{
+    font-size: 1.5rem;
+}
+
+.featured-taco button{
+    padding: 10px 25px;
+    border: none;
+    background-color: var(--yellow);
+}
+
+
+
+.instant-grams .top{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.instant-grams .decoration{
+    height: 15px;
+}
+
+.instant-grams .decoration-left{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--yellow));
+    width: 100%;
+}
+
+.instant-grams .decoration-right{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--yellow));
+    width: 100%;
+}
+
+.instant-grams .photos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.instant-grams .photo{
+    height: 240px;
+    background-size: cover;
+    flex: 1 1 240px;
+}
+
+#photo01{
+    background-image: url('images/instant-grams/01-pexels-los-muertos-crew.jpg');
+}
+
+#photo02{
+    background-image: url('images/instant-grams/02-los-muertos-crew.jpg');
+}
+
+#photo03{
+    background-image: url('images/instant-grams/03-los-muertos-crew.jpg');
+}
+
+#photo04{
+    background-image: url('images/instant-grams/04-los-muertos-crew.jpg');
+}
+
+#photo05{
+    background-image: url('images/instant-grams/05-hana-brannigan.jpg');
+}
+
+#photo06{
+    background-image: url('images/instant-grams/06-chan-walrus.jpg');
+}
+
+#photo07{
+    background-image: url('images/instant-grams/07-kleine-beyers.jpg');
+}
+
+#photo08{
+    background-image: url('images/instant-grams/08-suparerg-suksai.jpg');
+}
+
+#photo09{
+    background-image: url('images/instant-grams/09-harry-dona.jpg');
+}
+
+
+
+@media (max-width: 768px) {
+    .featured-taco{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-taco img{
+        width: 100%;
+    }
+}
