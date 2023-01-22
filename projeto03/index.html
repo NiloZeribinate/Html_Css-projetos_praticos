@@ -13,17 +13,17 @@
 
 
         <p>Digite a chave da criptografia</p>
-        <input type="text" name="key" id="key" placeholder="Chave da criptografia"></textarea>
+        <input type="text" name="key" id="key" class="inputText" placeholder="Chave da criptografia"></input>
         
         <p>Digite a mensagem que você quer criptografar</p>
-        <textarea type="text" name="cryptionMessage" id="cryptionMessage" placeholder="Mensagem à ser criptografada"></textarea>
+        <textarea type="text" name="cryptionMessage" id="cryptionMessage"class="inputText" placeholder="Mensagem à ser criptografada"></textarea>
         
         <p>Digite a mensagem que você quer descriptografada</p>
-        <textarea type="text" name="encryptionMessage" id="encryptionMessage" placeholder="Mensagem à ser descriptografada"></textarea>
+        <textarea type="text" name="encryptionMessage" id="encryptionMessage" class="inputText" placeholder="Mensagem à ser descriptografada"></textarea>
 
         <div id="buttons">
-            <button onclick="Crypt()">Criptografar</button>
-            <button onclick="Encrypt()">Descriptografar</button>
+            <input type="button" value="Criptografar" class="button" onclick="Crypt()">
+            <input type="button" value="Descriptografar" class="button" onclick="Encrypt()">
         </div>
     </section>
 

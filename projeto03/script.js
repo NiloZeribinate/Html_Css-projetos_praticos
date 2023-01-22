@@ -34,9 +34,11 @@ function handleCryptMessage(key, cryptionMessage){
 
     return message
 
-    function GetLetter(key, cryptionMessage){
+    function GetLetter(key, cryptionLetter){
+        if(cryptionLetter === ' ') return ' '
+
         const isEqualKey = (letter) => (letter == key)
-        const isEqualCryptionMessage = (letter) => (letter == cryptionMessage)
+        const isEqualCryptionMessage = (letter) => (letter == cryptionLetter)
         let indexKey = table[0].findIndex(isEqualKey)
         let indexCryptionMessage = table[0].findIndex(isEqualCryptionMessage)
         
@@ -44,12 +46,14 @@ function handleCryptMessage(key, cryptionMessage){
     }
 }
 
-function handleEncryptMessage(key, encryptionMessage){
-    const elongatedKey = ElongathenString(key, encryptionMessage.length)
+function handleEncryptMessage(key, encryptionLetter){
+    if(cryptionLetter === ' ') return ' '
+
+    const elongatedKey = ElongathenString(key, encryptionLetter.length)
     let message = ''
 
-    for(let i in encryptionMessage){
-        message += GetLetter(elongatedKey[i], encryptionMessage[i])
+    for(let i in encryptionLetter){
+        message += GetLetter(elongatedKey[i], encryptionLetter[i])
     }
 
     return message
@@ -88,7 +92,7 @@ function ClearString(text){
     let newText = ''
 
     for(i in text){
-        if(alfabeto.findIndex( (letter) => text[i].toLowerCase() === letter) != -1) newText += text[i]
+        if(alfabeto.findIndex( (letter) => (text[i].toLowerCase() === letter || text[i] === ' ')) != -1) newText += text[i]
     }
 
     return newText
@@ -99,7 +103,7 @@ function Crypt(){
     const key = ClearString(document.getElementById('key').value)
     const cryptionMessage = ClearString(document.getElementById('cryptionMessage').value)
 
-    document.getElementById('encryptionMessage').value = handleCryptMessage(key, cryptionMessage)
+    document.getElementById('select').value = handleCryptMessage(key, cryptionMessage)
 }
 
 function Encrypt(){

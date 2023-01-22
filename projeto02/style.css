@@ -11,12 +11,11 @@
 
 body{
     margin: 0;
-    padding: 0;
+    padding: 10px 50px;
 
     font-family: 'Segoe-UI', sans-serif;
     font-weight: 700;
     color: var(--black);
-    padding: 10px 50px;
 
     background-image: url('images/topography.png'), linear-gradient(160deg, #ec0bb4, #1485f6);
     background-size: contain;
@@ -41,7 +40,7 @@ nav{
     justify-content: center;
     font-size: 1.3rem;
     text-shadow: 0 2px rgba(39, 39, 39, .2);
-    
+    align-items: center;
 }
 
 ul{
@@ -69,12 +68,35 @@ nav a{
     text-align: center;
 }
 
+nav button{
+    visibility: hidden;
+    height: 48px;
+    border: none;
+
+    color: var(--black);
+    text-align: center;
+
+    display: block;
+    
+    background-color: var(--yellow);
+    width: 0;
+    padding: 0;
+}
+
 .content .top{
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
     "image image destaque1"
     "image image destaque2";
+}
+
+.invisibled{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .image{
@@ -223,6 +245,15 @@ nav a{
     flex: 1 1 240px;
 }
 
+
+
+footer{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: #fcfcfc;
+}
+
 #photo01{
     background-image: url('images/instant-grams/01-pexels-los-muertos-crew.jpg');
 }
@@ -262,6 +293,32 @@ nav a{
 
 
 @media (max-width: 768px) {
+    :root{
+        font-size: 13px;
+    }
+
+    nav{
+        gap: 7px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav #menuButton{
+        visibility: visible;
+        padding: 10px 15px;
+        width: auto;
+    }
+
+    body{
+        padding: 10px 15px;
+    }
+
+    .content .top{
+        grid-template-areas: 
+        "image image"
+        "destaque1 destaque2";
+    }
+
     .featured-taco{
         flex-direction: column;
         text-align: center;
@@ -269,5 +326,19 @@ nav a{
 
     .featured-taco img{
         width: 100%;
+    }
+}
+
+@media (max-width: 470px) {
+    .content .top{
+        grid-template-areas: 
+        "image"
+        "destaque1"
+        "destaque2";
+    }
+
+    nav ul{
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }

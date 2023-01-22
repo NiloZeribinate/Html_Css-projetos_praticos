@@ -54,7 +54,7 @@ textarea{
     padding: 10px;
 }
 
-input{
+input.inputText{
     width: 80%;
     height: auto;
     padding: 10px;
@@ -64,7 +64,7 @@ input{
     margin-top: 15px;
 }
 
-button{
+input.button{
     background: none;
     border-radius: 40px;
     border: none;
@@ -82,7 +82,7 @@ footer *{
 
 
 
-@media (max-width: 450px) {
+@media (max-width: 640px) {
     body{
         font-size: 16px;
     }
@@ -91,7 +91,7 @@ footer *{
         width: auto;
     }
 
-    textarea, input{
+    textarea, input.inputText{
         width: 90%;
     }
 
